@@ -33,12 +33,14 @@ public partial class login : System.Web.UI.Page
 
         if (ds.Tables[0].Rows.Count > 0)
         {
+       
             Response.Redirect("About.aspx");
         }
         else
         {
             Response.Write("incorrect login or password");
-
+            response.redirect("home");
+             
         }
     }
 }
